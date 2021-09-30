@@ -1,0 +1,15 @@
+<body>
+
+    <h2>Level {{level}}</h2>
+    
+    <h4>Current Question {{question_number+1}}/{{total_questions}}</h4><br/>
+    {{questions[question_number].Question_Desc}}<br/>
+    <input type= "radio" name="s_answer" (change)="answerChanged('a')"  [checked]="radioAStatus"> {{questions[question_number].Option1}}<br/>
+    <input type="radio" name="s_answer"  (change)="answerChanged('b')" [checked]="radioBStatus"> {{questions[question_number].Option2}}<br/>
+    <input type= "radio" name="s_answer"  (change)="answerChanged('c')"[checked]="radioCStatus"> {{questions[question_number].Option3}}<br/>
+    <input type="radio" name="s_answer"  (change)="answerChanged('d')" [checked]="radioDStatus"> {{questions[question_number].Option4}}
+    <br/><br/><br/>
+    <button type="button"  class="btn btn-primary btn-lg buttonspace" (click)="this.nextButton()" [disabled]="lastElementReached">Next</button>
+    <button type="button"  class="btn btn-primary btn-lg buttonspace" (click)="this.finishClicked()" >Finish</button>
+    
+    </body>

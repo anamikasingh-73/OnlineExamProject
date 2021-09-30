@@ -1,0 +1,19 @@
+<body>
+
+
+    <p *ngIf="pass">CONGRATULATIONS!</p>
+    <p *ngIf="!pass">SORRY!</p><br/><br/>
+    Your Score is:{{marks}}<br/>
+    
+    <p *ngIf="pass">You have cleared level {{levelNum}}</p> <br/>
+    <p *ngIf="proceed"> You can proceed to level {{levelNum+1}} </p>
+    <p *ngIf="!pass"> You failed! You cannot proceed further </p>
+    
+    
+    <div class="wrapper">
+        <button *ngIf="proceed" class="button" (click)="nextButton()">Next</button>
+        <button *ngIf="!proceed" class="button" (click)="finishButton()">Finish Test</button>
+    <!--<button class="button" [routerLink]="['/score-card']"><span>Exit </span></button>-->
+    </div>
+    
+    </body>

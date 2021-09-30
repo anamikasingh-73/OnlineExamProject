@@ -1,0 +1,24 @@
+<body>
+
+    <h2>SELECT EXAM</h2>
+    <ng-container *ngFor="let subject of subjects ;let i=index"> 
+        <button  class ="button" (click)="subjectSelected(i)">
+            {{subject}}
+
+        </button> 
+    </ng-container>
+
+    <!--
+    <button class="button" (click)="getquestion.getQuestions()"><span>C# </span></button>
+    <button class="button" [routerLink]="['/start-exam']"><span>C/C++ </span></button>
+    <button class="button" [routerLink]="['/start-exam']"><span>SQL </span></button><br/>
+    <button class="button"[routerLink]="['/start-exam']"><span>PHP </span></button>
+    <button class="button"[routerLink]="['/start-exam']"><span>C#/.NET </span></button>
+    <button class="button" [routerLink]="['/start-exam']"><span>PYTHON </span></button>-->
+    <br/><br/><br/>
+    <button type="button" class="btn btn-primary btn-lg">Logout</button>
+    
+    
+    
+    
+    </body>
